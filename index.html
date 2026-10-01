@@ -1,1 +1,183 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Oguma Eluanatein Odo — Machine Learning Engineer</title>
+<meta name="description" content="Machine learning engineer focused on RAG systems, biomedical signal and imaging pipelines, model evaluation, and production packaging." />
+<meta property="og:title" content="Oguma Eluanatein Odo — Machine Learning Engineer" />
+<meta property="og:description" content="RAG, ECG classification, clinical document AI, 3D CT imaging pipelines, and deployable ML systems." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#fafaf9;--surface:#fff;--ink:#0c0a09;--muted:#57534e;--line:#e7e5e4;--accent:#0f766e;--accent-hover:#0d9488}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:880px;margin:0 auto;padding:0 1.5rem}
+nav{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 0;border-bottom:1px solid var(--line)}
+.brand{font-weight:600;font-size:.95rem;letter-spacing:-.01em}
+.nav-links{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;align-items:center;font-size:.875rem;font-weight:500;color:var(--muted)}
+.nav-links a{text-decoration:none}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{display:inline-block;padding:.4rem .85rem;border:1px solid var(--ink);text-decoration:none;font-size:.8125rem;font-weight:600;color:var(--ink)!important}
+.nav-cta:hover{background:var(--ink);color:#fff!important}
+.hero{padding:3.5rem 0 3rem;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1fr auto;gap:2.5rem;align-items:start}
+.role{font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem}
+h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:clamp(1.85rem,4.2vw,2.45rem);font-weight:600;letter-spacing:-.025em;line-height:1.2;margin-bottom:1rem;max-width:28ch}
+.lede{font-size:1.0625rem;color:var(--muted);max-width:38rem;margin-bottom:1.75rem}
+.actions{display:flex;flex-wrap:wrap;gap:.65rem}
+.btn{display:inline-flex;align-items:center;padding:.65rem 1.15rem;font-size:.875rem;font-weight:600;text-decoration:none;border:1px solid transparent}
+.btn-fill{background:var(--ink);color:#fff}
+.btn-fill:hover{background:#292524}
+.btn-outline{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-outline:hover{border-color:var(--ink)}
+.portrait{width:168px;height:168px;border-radius:4px;overflow:hidden;border:1px solid var(--line);background:#e7e5e4;flex-shrink:0}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+section{padding:2.75rem 0;border-bottom:1px solid var(--line)}
+.section-kicker{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.35rem}
+h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:1.5rem;font-weight:600;letter-spacing:-.02em;margin-bottom:1.5rem}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.principle{background:var(--surface);border:1px solid var(--line);padding:1.15rem 1.2rem}
+.principle h3{font-size:.9rem;font-weight:600;margin-bottom:.35rem}
+.principle p{font-size:.85rem;color:var(--muted);line-height:1.5}
+.project{padding:1.5rem 0;border-top:1px solid var(--line)}
+.project:first-of-type{border-top:none;padding-top:0}
+.project-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1rem;margin-bottom:.5rem}
+.project-head h3{font-size:1.1rem;font-weight:600;letter-spacing:-.01em}
+.project-meta{font-size:.8rem;color:var(--muted);font-weight:500}
+.project p{font-size:.95rem;color:var(--muted);margin-bottom:.65rem;max-width:42rem}
+.pipeline{font-family:ui-monospace,"SF Mono","Cascadia Code",monospace;font-size:.72rem;color:#44403c;background:#f5f5f4;border:1px solid var(--line);padding:.5rem .75rem;margin-bottom:.75rem;overflow-x:auto;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.75rem}
+.chip{font-size:.7rem;font-weight:500;color:var(--muted);border:1px solid var(--line);padding:.15rem .45rem;background:var(--surface)}
+.project-links{display:flex;flex-wrap:wrap;gap:1rem;font-size:.875rem;font-weight:600}
+.project-links a{color:var(--accent);text-decoration:none}
+.project-links a:hover{color:var(--accent-hover);text-decoration:underline}
+.more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.more-card{background:var(--surface);border:1px solid var(--line);padding:1.15rem}
+.more-card h3{font-size:.95rem;font-weight:600;margin-bottom:.4rem}
+.more-card p{font-size:.82rem;color:var(--muted);margin-bottom:.75rem}
+.stack-table{width:100%;border-collapse:collapse;font-size:.9rem}
+.stack-table th,.stack-table td{text-align:left;padding:.65rem 0;border-bottom:1px solid var(--line);vertical-align:top}
+.stack-table th{width:28%;font-weight:600;color:var(--ink);padding-right:1rem}
+.stack-table td{color:var(--muted)}
+.about-text{font-size:.975rem;color:var(--muted);max-width:40rem;margin-bottom:1.25rem}
+.contact-row{display:flex;flex-wrap:wrap;gap:1.25rem;font-size:.9rem;font-weight:600}
+.contact-row a{color:var(--accent);text-decoration:none}
+.contact-row a:hover{text-decoration:underline}
+footer{padding:2rem 0 3rem;font-size:.85rem;color:var(--muted)}
+footer .foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem;margin-top:.75rem;padding-top:1rem;border-top:1px solid var(--line)}
+@media(max-width:720px){.hero-grid{grid-template-columns:1fr}.portrait{width:120px;height:120px}.principles{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr}.stack-table th{width:36%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+<div class="brand">Oguma Eluanatein Odo</div>
+<div class="nav-links">
+<a href="#work">Work</a>
+<a href="#stack">Stack</a>
+<a href="#about">About</a>
+<a class="nav-cta" href="https://drive.google.com/file/d/1hRrlW-3MacqulI-4E_ZHZhdyiAwoefTJ/view?usp=drivesdk" target="_blank" rel="noopener">Resume</a>
+</div>
+</nav>
+<header class="hero">
+<div class="hero-grid">
+<div>
+<p class="role">Machine Learning Engineer</p>
+<h1>End-to-end ML systems: data, evaluation, and deployment.</h1>
+<p class="lede">I design and ship applied ML systems—retrieval-augmented generation, biomedical signal classification, medical imaging pipelines, and service packaging (APIs, containers, CI). Emphasis on comparable baselines, honest metrics, and repositories others can run.</p>
+<div class="actions">
+<a class="btn btn-fill" href="#work">Selected work</a>
+<a class="btn btn-outline" href="https://github.com/eluan216" target="_blank" rel="noopener">GitHub</a>
+<a class="btn btn-outline" href="https://drive.google.com/file/d/1hRrlW-3MacqulI-4E_ZHZhdyiAwoefTJ/view?usp=drivesdk" target="_blank" rel="noopener">Resume</a>
+</div>
+</div>
+<div class="portrait">
+<img src="https://avatars.githubusercontent.com/u/134099412?s=400&amp;v=4" alt="Portrait of Oguma Eluanatein Odo" width="168" height="168" decoding="async" fetchpriority="high" referrerpolicy="no-referrer" />
+</div>
+</div>
+</header>
+<section aria-labelledby="approach-title">
+<p class="section-kicker">Approach</p>
+<h2 id="approach-title">How systems get built</h2>
+<div class="principles">
+<div class="principle"><h3>Evaluation first</h3><p>Prefer multi-model comparison and held-out or inter-patient splits over a single reported score.</p></div>
+<div class="principle"><h3>Runnable artifacts</h3><p>Synthetic or documented data paths, tests, and CI so a reviewer can exercise the pipeline without tribal knowledge.</p></div>
+<div class="principle"><h3>Service boundaries</h3><p>Models leave notebooks as APIs, containers, or interactive apps with explicit failure modes.</p></div>
+</div>
+</section>
+<section id="work" aria-labelledby="work-title">
+<p class="section-kicker">Selected work</p>
+<h2 id="work-title">Projects</h2>
+<article class="project">
+<div class="project-head"><h3>LLM document Q&amp;A</h3><span class="project-meta">RAG · live demo</span></div>
+<p>Production-style retrieval stack: document upload, chunking, dense embeddings, FAISS retrieval, and grounded answers with open-source models. Deployed as a Streamlit application.</p>
+<div class="pipeline">Documents → chunk → embed → FAISS → retrieve → LLM → answer</div>
+<div class="chips"><span class="chip">Hugging Face</span><span class="chip">sentence-transformers</span><span class="chip">FAISS</span><span class="chip">Streamlit</span></div>
+<div class="project-links"><a href="https://llama-nlp-assistant-4hyjezelnvzdrndrsxqjts.streamlit.app" target="_blank" rel="noopener">Live demo</a><a href="https://github.com/eluan216/llama-nlp-assistant" target="_blank" rel="noopener">Repository</a></div>
+</article>
+<article class="project">
+<div class="project-head"><h3>ECG arrhythmia classification</h3><span class="project-meta">Biomedical ML · research only</span></div>
+<p>End-to-end beat classification on MIT-BIH with inter-patient evaluation. Random Forest morphology baseline, 1D-CNN on raw windows, multi-model offline benchmark, FastAPI inference surface, Docker image, and GitHub Actions. Not a medical device.</p>
+<div class="pipeline">Beats → features / windows → models → stratified CV → selection → API</div>
+<div class="chips"><span class="chip">PyTorch</span><span class="chip">scikit-learn</span><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">CI</span></div>
+<div class="project-links"><a href="https://colab.research.google.com/github/eluan216/ecg-arrhythmia-detection/blob/main/ecg_colab_runner.ipynb" target="_blank" rel="noopener">Colab runner</a><a href="https://github.com/eluan216/ecg-arrhythmia-detection" target="_blank" rel="noopener">Repository</a></div>
+</article>
+<article class="project">
+<div class="project-head"><h3>Bio-Doc AI</h3><span class="project-meta">Clinical document RAG</span></div>
+<p>Retrieval-augmented answers over biomedical PDFs: parse, chunk, embed, retrieve, and respond with source-aware generation. LangChain orchestration, FAISS index, Streamlit UI, dependency-resilient imports, and CI across Python 3.10–3.12.</p>
+<div class="pipeline">PDF → parse → chunk → embed → FAISS → retrieve → LLM</div>
+<div class="chips"><span class="chip">LangChain</span><span class="chip">FAISS</span><span class="chip">Streamlit</span><span class="chip">pytest</span></div>
+<div class="project-links"><a href="https://github.com/eluan216/bio-doc-ai" target="_blank" rel="noopener">Repository</a></div>
+</article>
+<article class="project">
+<div class="project-head"><h3>3D CT scan explorer</h3><span class="project-meta">Medical imaging · research only</span></div>
+<p>Format-agnostic CT pipeline: DICOM or NIfTI ingest, canonical volume normalization, validation, segmentation interface, mesh export, and a Next.js + Three.js client with synchronized axial, coronal, and sagittal views. Not a medical device.</p>
+<div class="pipeline">DICOM / NIfTI → CanonicalVolume → process → assets + manifest → 3D / MPR viewer</div>
+<div class="chips"><span class="chip">Python</span><span class="chip">nibabel</span><span class="chip">Three.js</span><span class="chip">Next.js</span></div>
+<div class="project-links"><a href="https://drive.google.com/file/d/1j5YIkJg9D9K9xvKv-myd8AWwXLdpXm36/view?usp=drivesdk" target="_blank" rel="noopener">Demo video</a><a href="https://github.com/eluan216/3d-ct-scan-explorer" target="_blank" rel="noopener">Repository</a></div>
+</article>
+</section>
+<section id="additional" aria-labelledby="more-title">
+<p class="section-kicker">Additional</p>
+<h2 id="more-title">Other systems</h2>
+<div class="more-grid">
+<div class="more-card"><h3>Industrial signal analytics</h3><p>DSP preprocessing, predictive maintenance on synthetic sensor series, calibration tracking in SQL. Offline runnable.</p><div class="project-links"><a href="https://github.com/eluan216/industrial-iot-analytics" target="_blank" rel="noopener">Repository</a></div></div>
+<div class="more-card"><h3>Sales performance analytics</h3><p>Generate, clean, and query retail sales data; export tables for spreadsheet or BI tools.</p><div class="project-links"><a href="https://github.com/eluan216/sales-performance-dashboard" target="_blank" rel="noopener">Repository</a></div></div>
+<div class="more-card"><h3>Predictive maintenance</h3><p>Random Forest failure prediction on synthetic process features with clear offline metrics.</p><div class="project-links"><a href="https://github.com/eluan216/predictive-maintenance-oil-gas" target="_blank" rel="noopener">Repository</a></div></div>
+</div>
+</section>
+<section id="stack" aria-labelledby="stack-title">
+<p class="section-kicker">Stack</p>
+<h2 id="stack-title">Technical tools</h2>
+<table class="stack-table"><tbody>
+<tr><th>Languages</th><td>Python, SQL</td></tr>
+<tr><th>ML / DL</th><td>PyTorch, scikit-learn, experiment tracking</td></tr>
+<tr><th>LLM / retrieval</th><td>LangChain, FAISS, Hugging Face, embeddings</td></tr>
+<tr><th>Imaging</th><td>DICOM, NIfTI, Three.js, Next.js</td></tr>
+<tr><th>Serving</th><td>FastAPI, Streamlit, Docker, GitHub Actions</td></tr>
+</tbody></table>
+</section>
+<section id="about" aria-labelledby="about-title">
+<p class="section-kicker">About</p>
+<h2 id="about-title">Background</h2>
+<p class="about-text">B.Sc. Biomedical Technology. Work spans retrieval systems, predictive models, biomedical signals, volumetric imaging pipelines, and packaging models for inspection and use. Open to machine learning engineering roles where evaluation rigor and system ownership matter.</p>
+<div class="contact-row">
+<a href="https://linkedin.com/in/eluanatein-oguma-5552571b6" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://github.com/eluan216" target="_blank" rel="noopener">GitHub</a>
+<a href="mailto:ogumaeluan@gmail.com">ogumaeluan@gmail.com</a>
+</div>
+</section>
+<footer>
+<p>Portfolio and research demonstrations only. Clinical projects are not medical devices and are not intended for diagnosis or treatment.</p>
+<div class="foot-row"><span>Oguma Eluanatein Odo</span><a href="https://github.com/eluan216" target="_blank" rel="noopener">github.com/eluan216</a></div>
+</footer>
+</div>
+</body>
+</html>

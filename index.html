@@ -26,6 +26,7 @@
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
+html, body { overflow-x: hidden; }
 body {
   font-family: "Source Sans 3", system-ui, sans-serif;
   background: var(--bg);
@@ -255,6 +256,9 @@ h2 {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0.7rem;
   overflow-x: auto;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.45;
 }
 .chips { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.7rem; }
 .chip {
@@ -355,12 +359,89 @@ footer .foot-row {
   color: var(--ink);
 }
 @media (max-width: 740px) {
-  .hero { grid-template-columns: 1fr; }
-  .portrait-wrap { justify-self: start; width: 140px; }
-  .portrait { width: 140px; height: 168px; }
-  .principles { grid-template-columns: 1fr; }
-  .more-grid { grid-template-columns: 1fr; }
-  .project { grid-template-columns: 2.5rem 1fr; }
+  .wrap { padding: 0 1rem; }
+  .masthead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.9rem 0 0.85rem;
+  }
+  .nav-links {
+    width: 100%;
+    gap: 0.5rem 0.85rem;
+    font-size: 0.84rem;
+  }
+  .nav-cta { margin-left: auto; }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem 0 1.75rem;
+  }
+  .role {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    max-width: 100%;
+    line-height: 1.4;
+  }
+  h1 {
+    font-size: clamp(1.55rem, 7.5vw, 2rem);
+    margin-bottom: 0.75rem;
+  }
+  .lede {
+    font-size: 0.98rem;
+    margin-bottom: 1.15rem;
+  }
+  .actions {
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.84rem;
+  }
+  .portrait-wrap {
+    justify-self: start;
+    width: 132px;
+  }
+  .portrait {
+    width: 132px;
+    height: 158px;
+  }
+  .band { padding: 1.75rem 0; }
+  .band h2, section.block h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1.1rem;
+  }
+  .principles { grid-template-columns: 1fr; gap: 0.75rem; }
+  .principle { padding: 1rem; }
+  section.block { padding: 1.85rem 0; }
+  .project {
+    grid-template-columns: 2.25rem 1fr;
+    gap: 0.65rem;
+    padding: 1.1rem;
+    margin-bottom: 0.85rem;
+    box-shadow: 3px 3px 0 rgba(26,20,16,0.1);
+  }
+  .project-num { font-size: 1.35rem; }
+  .project-head h3 { font-size: 1.02rem; }
+  .project p { font-size: 0.9rem; }
+  .pipeline { font-size: 0.68rem; padding: 0.45rem 0.6rem; }
+  .more-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+  .stack-grid { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .stack-item { padding: 0.85rem; }
+  .contact-row { gap: 0.85rem 1.1rem; font-size: 0.9rem; }
+  footer { padding: 1.5rem 0 2.25rem; }
+}
+@media (max-width: 400px) {
+  .wrap { padding: 0 0.85rem; }
+  .actions { flex-direction: column; }
+  .btn { width: 100%; }
+  .stack-grid { grid-template-columns: 1fr; }
+  .nav-links { gap: 0.4rem 0.7rem; }
+  h1 { font-size: 1.45rem; }
 }
 </style>
 </head>

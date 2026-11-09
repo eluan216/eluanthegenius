@@ -483,6 +483,12 @@ details p { margin-top: .7rem; color: var(--muted); max-width: 44rem; }
 .service-more { margin-top: 1.5rem; }
 .service h3 a { text-decoration-thickness: 1px; text-underline-offset: .2em; }
 .service h3 a:hover { color: var(--teal); }
+.credentials { list-style: none; padding: 0; }
+.credentials li { display: flex; justify-content: space-between; align-items: baseline; gap: .75rem 1.5rem; padding: 1.15rem 0; border-top: 1px solid var(--line); }
+.credentials h3 { font-size: 1rem; margin-bottom: .3rem; }
+.credentials p, .credentials time { color: var(--muted); font-size: .9rem; }
+.credentials time { flex-shrink: 0; }
+@media (max-width: 740px) { .credentials li { flex-direction: column; gap: .35rem; } }
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -577,6 +583,7 @@ details p { margin-top: .7rem; color: var(--muted); max-width: 44rem; }
       <a href="#contact">Contact</a>
       <a href="#stack">Stack</a>
       <a href="#about">About</a>
+      <a href="#certifications">Certifications</a>
       <a class="nav-cta" href="https://drive.google.com/file/d/1hRrlW-3MacqulI-4E_ZHZhdyiAwoefTJ/view?usp=drivesdk" target="_blank" rel="noopener">Resume</a>
     </nav>
   </header>
@@ -685,6 +692,15 @@ details p { margin-top: .7rem; color: var(--muted); max-width: 44rem; }
     </div>
   </section>
 
+<section class="block" id="certifications" aria-labelledby="certifications-title">
+<p class="section-kicker">Continued learning</p><h2 id="certifications-title">Certifications &amp; course completions</h2>
+<p class="section-intro">Formal coursework supporting my practical work in Python, machine learning, generative AI, agents, and data analytics.</p>
+<ul class="credentials"><li><div><h3>CS50’s Introduction to Programming with Python</h3><p>Harvard University</p></div><time datetime="2026-10">October 2026</time></li>
+<li><div><h3>Generative AI: Working with Large Language Models</h3><p>LinkedIn Learning</p></div><time datetime="2026-09">September 2026</time></li>
+<li><div><h3>Artificial Intelligence Foundations: Machine Learning</h3><p>LinkedIn Learning</p></div><time datetime="2026-09">September 2026</time></li>
+<li><div><h3>Fundamentals of Agents — Agents Course Unit 1</h3><p>Hugging Face</p></div><time datetime="2026-08">August 2026</time></li>
+<li><div><h3>Intro to Deep Learning; Intro to Machine Learning</h3><p>Kaggle</p></div><time datetime="2026-08">August 2026</time></li>
+<li><div><h3>Learning Data Analytics</h3><p>LinkedIn Learning</p></div><time datetime="2026-01">January 2026</time></li></ul></section>
   <section class="block" id="about">
     <p class="section-kicker">About</p>
     <h2>Background</h2>

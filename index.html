@@ -489,6 +489,13 @@ details p { margin-top: .7rem; color: var(--muted); max-width: 44rem; }
 .credentials p, .credentials time { color: var(--muted); font-size: .9rem; }
 .credentials time { flex-shrink: 0; }
 @media (max-width: 740px) { .credentials li { flex-direction: column; gap: .35rem; } }
+
+/* Organization marks retain adjacent text labels. */
+.credential-identity { display: flex; align-items: center; gap: 1rem; min-width: 0; }
+.org-logo { display: block; width: 42px; height: 42px; object-fit: contain; flex: 0 0 42px; }
+.social-link { display: inline-flex; align-items: center; gap: .45rem; }
+.social-logo { display: block; width: 20px; height: 20px; object-fit: contain; flex-shrink: 0; }
+@media(max-width:740px) { .credentials time { margin-left: 58px; } }
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -695,19 +702,19 @@ details p { margin-top: .7rem; color: var(--muted); max-width: 44rem; }
 <section class="block" id="certifications" aria-labelledby="certifications-title">
 <p class="section-kicker">Continued learning</p><h2 id="certifications-title">Certifications &amp; course completions</h2>
 <p class="section-intro">Formal coursework supporting my practical work in Python, machine learning, generative AI, agents, and data analytics.</p>
-<ul class="credentials"><li><div><h3>CS50’s Introduction to Programming with Python</h3><p>Harvard University</p></div><time datetime="2026-10">October 2026</time></li>
-<li><div><h3>Generative AI: Working with Large Language Models</h3><p>LinkedIn Learning</p></div><time datetime="2026-09">September 2026</time></li>
-<li><div><h3>Artificial Intelligence Foundations: Machine Learning</h3><p>LinkedIn Learning</p></div><time datetime="2026-09">September 2026</time></li>
-<li><div><h3>Fundamentals of Agents — Agents Course Unit 1</h3><p>Hugging Face</p></div><time datetime="2026-08">August 2026</time></li>
-<li><div><h3>Intro to Deep Learning; Intro to Machine Learning</h3><p>Kaggle</p></div><time datetime="2026-08">August 2026</time></li>
-<li><div><h3>Learning Data Analytics</h3><p>LinkedIn Learning</p></div><time datetime="2026-01">January 2026</time></li></ul></section>
+<ul class="credentials"><li><div class="credential-identity"><img class="org-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Harvard_University_coat_of_arms.svg" width="42" height="42" alt="" aria-hidden="true" loading="lazy" decoding="async" /><div><h3>CS50’s Introduction to Programming with Python</h3><p>Harvard University</p></div></div><time datetime="2026-10">October 2026</time></li>
+<li><div class="credential-identity"><img class="org-logo" src="./assets/logos/linkedin.svg" width="42" height="42" alt="" aria-hidden="true" loading="lazy" decoding="async" /><div><h3>Generative AI: Working with Large Language Models</h3><p>LinkedIn Learning</p></div></div><time datetime="2026-09">September 2026</time></li>
+<li><div class="credential-identity"><img class="org-logo" src="./assets/logos/linkedin.svg" width="42" height="42" alt="" aria-hidden="true" loading="lazy" decoding="async" /><div><h3>Artificial Intelligence Foundations: Machine Learning</h3><p>LinkedIn Learning</p></div></div><time datetime="2026-09">September 2026</time></li>
+<li><div class="credential-identity"><img class="org-logo" src="./assets/logos/huggingface.svg" width="42" height="42" alt="" aria-hidden="true" loading="lazy" decoding="async" /><div><h3>Fundamentals of Agents — Agents Course Unit 1</h3><p>Hugging Face</p></div></div><time datetime="2026-08">August 2026</time></li>
+<li><div class="credential-identity"><img class="org-logo" src="./assets/logos/kaggle.svg" width="42" height="42" alt="" aria-hidden="true" loading="lazy" decoding="async" /><div><h3>Intro to Deep Learning; Intro to Machine Learning</h3><p>Kaggle</p></div></div><time datetime="2026-08">August 2026</time></li>
+<li><div class="credential-identity"><img class="org-logo" src="./assets/logos/linkedin.svg" width="42" height="42" alt="" aria-hidden="true" loading="lazy" decoding="async" /><div><h3>Learning Data Analytics</h3><p>LinkedIn Learning</p></div></div><time datetime="2026-01">January 2026</time></li></ul></section>
   <section class="block" id="about">
     <p class="section-kicker">About</p>
     <h2>Background</h2>
     <p class="about-text">I’m Oguma Eluanatein Odo, also known as Eluan the Genius—an AI/ML engineer, Biomedical Technology graduate, and founder of Elite Data Intelligence. My work connects retrieval, local inference, biomedical signals, and useful data interfaces. I care about understandable implementations, fair model comparisons, and software another person can reproduce.</p><p class="about-text">I also work as a STEM Engineer and mentor and coach at World STEM Festival. Open to AI/ML engineering roles, freelance projects, and research collaborations across Nigeria and internationally through remote work. Explore my public work above or get in touch to discuss a concrete problem.</p>
     <div class="contact-row">
-      <a href="https://linkedin.com/in/eluanatein-oguma-5552571b6" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/eluan216" target="_blank" rel="noopener">GitHub</a>
+      <a class="social-link" href="https://linkedin.com/in/eluanatein-oguma-5552571b6" target="_blank" rel="noopener"><img class="social-logo" src="./assets/logos/linkedin.svg" width="20" height="20" alt="" aria-hidden="true" loading="lazy" decoding="async" /><span>LinkedIn</span></a>
+      <a class="social-link" href="https://github.com/eluan216" target="_blank" rel="noopener"><img class="social-logo" src="./assets/logos/github.svg" width="20" height="20" alt="" aria-hidden="true" loading="lazy" decoding="async" /><span>GitHub</span></a>
       <a href="mailto:ogumaeluan@gmail.com">ogumaeluan@gmail.com</a>
     </div>
   </section>
@@ -725,7 +732,7 @@ details p { margin-top: .7rem; color: var(--muted); max-width: 44rem; }
     <p>Research and portfolio demonstrations only. Clinical projects are not medical devices.</p>
     <div class="foot-row">
       <span>Oguma Eluanatein Odo</span>
-      <a href="https://github.com/eluan216" target="_blank" rel="noopener">github.com/eluan216</a>
+      <a class="social-link" href="https://github.com/eluan216" target="_blank" rel="noopener"><img class="social-logo" src="./assets/logos/github.svg" width="20" height="20" alt="" aria-hidden="true" loading="lazy" decoding="async" /><span>github.com/eluan216</span></a>
     </div>
   </footer>
 </div>
